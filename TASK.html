@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yusra Kedir Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark");
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white transition duration-300">
+
+    <!-- Header -->
+    <header class="bg-blue-700 dark:bg-gray-800 text-white py-4 shadow-md">
+        <div class="max-w-5xl mx-auto flex justify-between items-center px-6">
+            <h1 class="text-3xl font-bold">Yusra Kedir</h1>
+
+            <button id="theme-btn"
+                class="bg-white text-blue-700 dark:bg-gray-700 dark:text-white px-4 py-2 rounded-lg">
+                🌙 Dark Mode
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto p-6 space-y-8">
+
+        <!-- About -->
+        <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold text-blue-700 dark:text-blue-400 mb-3">About Me</h2>
+            <p>
+                I am a Computer Science student learning HTML, CSS, Git and JavaScript.
+                I enjoy building simple and responsive websites.
+            </p>
+        </section>
+
+        <!-- Skills -->
+        <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold text-blue-700 dark:text-blue-400 mb-5">Skills</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+
+                <div class="bg-blue-700 text-white p-5 rounded-lg text-center font-semibold">
+                    HTML
+                </div>
+
+                <div class="bg-blue-700 text-white p-5 rounded-lg text-center font-semibold">
+                    CSS
+                </div>
+
+                <div class="bg-blue-700 text-white p-5 rounded-lg text-center font-semibold">
+                    JavaScript
+                </div>
+
+                <div class="bg-blue-700 text-white p-5 rounded-lg text-center font-semibold">
+                    Git
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Goals -->
+        <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold text-blue-700 dark:text-blue-400 mb-3">Goals</h2>
+            <p>My goal is to become a professional Full Stack Web Developer.</p>
+        </section>
+
+        <!-- Contact -->
+        <section class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold text-blue-700 dark:text-blue-400 mb-3">Contact</h2>
+
+            <p><strong>Name:</strong> Yusra Kedir</p>
+            <p><strong>Email:</strong> yusra.kedir@gmail.com</p>
+        </section>
+
+    </main>
+
+    <footer class="bg-black text-white text-center py-4 mt-8">
+        © 2026 Yusra Kedir
+    </footer>
+
+    <script>
+    const button = document.getElementById("theme-btnSSS");
+
+        button.onclick = () => {
+            document.documentElement.classList.toggle("dark");
+
+            if (document.documentElement.classList.contains("dark")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.removeItem("theme");
